@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #logo {
+            width: 120px;
+            float: left;
+        }
+        #banner{
+            width: 100%;
+        }
+        .menu{
+            float: right;
+        }
+        .menu li{
+            display: inline;
+        }
+        .menu li a {
+            text-decoration: none;
+            margin: 10px;
+        }
+        #menuSmall {
+            float: right;
+        }
+        /*dt doc*/
+        @media all and (min-width:240px){
+            .menu{
+                display: none;
+            }
+            .menu li {
+                width: 100%;
+                display: inline-block;
+                margin-left: 30%;
+            }
+        }
+        /*dt ngang*/
+        @media all and (min-width:576px){
+            #menuSmall{
+                display: none;
+            }
+            .menu{
+                display: block;
+            }
+            .menu li{
+                display: inline;
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img id="logo" src="https://fpt.edu.vn/Content/images/assets/Poly.png" alt="">
+    <i onclick="showMenu()" id="menuSmall" class="fa fa-bars" style="font-size: 24px"></i>
+    <ul id="menuBig" class="menu">
+    <li><a href="">Trang chu</a></li>
+    <li><a href="">Gioi thieu</a></li>
+    <li><a href="">San pham</a></li>
+    <li><a href="">Tin tuc</a></li>
+    <li><a href="">Lien he</a></li>
+    </ul>
+    <img id="banner" src="https://caodang.fpt.edu.vn/wp-content/uploads/z4177663451259_416a321a403a996ecee9d1e777497364.jpg" alt="">
+    <script>
+        function showMenu(){
+            if(document.getElementById('menuBig').style.display=='none'){
+                document.getElementById('menuBig').style.display='block';
+            }else{
+                document.getElementById('menuBig').style.display='none';
+            }
+        }
+    </script>
+</body>
+</html>
